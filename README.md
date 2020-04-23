@@ -68,6 +68,26 @@ Installing nautilus is just to test out the GUI status. If you wish you may also
 
 ## Step 4
 
+Add a user inside the docker container. Most probably when you start your docker container it is using root and some application cannot start when you are root.
+
+```bash
+# Add the user bruce, you may skip the details with `enter`
+adduser bruce --disabled-password --uid=3000
+# Use user bruce
+su bruce
+```
+
+**Explanation**
+
+Command | Explanation
+--- | ---
+adduser | Adding a new user inside docker container. Set the user id as 3000 and disable the password.
+su bruce | Use user bruce.
+
+If you do not do this, you may recieve this error. `You are trying to start vscode as a super user which is not recommended. If you really want to, you must specify an alternate user data directory using the --user-data-dir argument.`
+
+## Step 5
+
 Now allow docker using local host to connect to X server.
 
 ```bash
