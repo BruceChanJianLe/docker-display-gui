@@ -11,7 +11,7 @@ docker run \
     -d \
     -ti \
     --net=host \
-    -v $(pwd)/..:/home \
+    -v $(pwd):/home \
     --name u16_opencv \
     --cap-add=SYS_PTRACE \
     --env="DISPLAY" \
@@ -72,7 +72,8 @@ Add a user inside the docker container. Most probably when you start your docker
 
 ```bash
 # Add the user bruce, you may skip the details with `enter`
-adduser bruce --disabled-password --uid=3000
+# adduser bruce --disabled-password --uid=3000
+adduser bruce --uid=3000
 # Use user bruce
 su bruce
 ```
