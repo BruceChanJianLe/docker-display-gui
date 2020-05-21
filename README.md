@@ -16,10 +16,11 @@ docker run \
     --cap-add=SYS_PTRACE \
     --env="DISPLAY" \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    --privileged \
     -v /usr/lib/nvidia-410:/usr/lib/nvidia-410 \
     -v /usr/lib32/nvidia-410:/usr/lib32/nvidia-410 \
     --device /dev/dri \
-    ubuntu:16.04 
+    ubuntu:16.04
 ```
 
 **Explanation**
