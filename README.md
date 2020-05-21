@@ -5,7 +5,26 @@ If you are using docker and would like to display the GUI applications from with
 ## Step 1
 
 **Create a container with the following command**
+A normal display
 ```bash
+# Start the docker container
+docker run \
+    -d \
+    -ti \
+    --net=host \
+    -v $(pwd):/home \
+    --name u16_opencv \
+    --cap-add=SYS_PTRACE \
+    --env="DISPLAY" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    --privileged \
+    -v /usr/lib/nvidia-410:/usr/lib/nvidia-410 \
+    -v /usr/lib32/nvidia-410:/usr/lib32/nvidia-410 \
+    --device /dev/dri \
+    ubuntu:16.04
+```
+Display with OpenGL
+```
 # Start the docker container
 docker run \
     -d \
