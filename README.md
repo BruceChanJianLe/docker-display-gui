@@ -16,6 +16,9 @@ docker run \
     --cap-add=SYS_PTRACE \
     --env="DISPLAY" \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    -v /usr/lib/nvidia-410:/usr/lib/nvidia-410 \
+    -v /usr/lib32/nvidia-410:/usr/lib32/nvidia-410 \
+    --device /dev/dri \
     ubuntu:16.04 
 ```
 
@@ -112,3 +115,4 @@ nautilus .
 - Understanding --cap-add [link](https://docs.docker.com/engine/reference/run/#/runtime-privilege-and-linux-capabilities)
 - Difference between exec and exec -ti [link](https://stackoverflow.com/questions/52970443/whats-the-difference-between-docker-exec-and-docker-exec-it)
 - Start a GUI-Application as root in a Ubuntu Container [link](https://forums.docker.com/t/start-a-gui-application-as-root-in-a-ubuntu-container/17069)
+- Displaying with nvidia drivers [link](https://github.com/SoonminHwang/dockers/issues/1)
