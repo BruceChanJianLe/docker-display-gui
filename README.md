@@ -137,3 +137,5 @@ nautilus .
 - Displaying with nvidia drivers [link](https://github.com/SoonminHwang/dockers/issues/1)
 - Docker example that runs nvidia drivers [link](https://github.com/osrf/servicesim/blob/master/docker/Dockerfile)
 - Docker example 2 that runs nvidia dirvers [link](https://github.com/henry2423/docker-ros-x11)
+- https://github.com/Intel-Media-SDK/MediaSDK/wiki/Running-on-GPU-under-docker
+- https://answers.ros.org/question/301056/ros2-rviz-in-docker-container/
